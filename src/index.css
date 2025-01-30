@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #e0e0e0;
+  background: #000; /* Fallback */
+  height: 100%;
+  overflow: hidden; /* We'll manage scroll in our containers */
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The main container for the entire app */
+.app-container {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Basic reset for anchors */
+a {
+  text-decoration: none;
+  color: inherit;
+}
