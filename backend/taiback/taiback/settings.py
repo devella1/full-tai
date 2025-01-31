@@ -144,6 +144,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 if not os.path.exists(TAISCRIPT_REPO_DIR):
     print("Cloning TaiScript repository...")
-    subprocess.run(["git", "clone", TAISCRIPT_REPO_URL, TAISCRIPT_REPO_DIR])
+    subprocess.run(["git", "clone", "-b", "frontend", TAISCRIPT_REPO_URL, TAISCRIPT_REPO_DIR])
 else:
     print("TaiScript repository already exists.")
