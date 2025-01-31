@@ -1,9 +1,11 @@
 import React from "react";
 import CodeIDE from "./CodeIDE";
+import Footer from "./Footer";
 import Documentation from "./Documentation";
 
 function LandingPage() {
   return (
+    <>
     <main className="landing-page">
       {/* Left: hero panel for code editor */}
       <section className="left-hero">
@@ -18,6 +20,8 @@ function LandingPage() {
         <Documentation />
       </section>
     </main>
+    <Footer/>
+    </>
   );
 }
 
