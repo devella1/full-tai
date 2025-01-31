@@ -197,10 +197,9 @@ body {
 }
 
 .brand-logo {
-  height: 80px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   margin-right: 8px;
-  margin-top:-2rem;
   object-fit: contain;
 }
 

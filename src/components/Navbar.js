@@ -11,12 +11,10 @@ function Navbar({ title }) {
           alt="TaiScript Logo" 
           className="brand-logo"
         />
-        <span className="brand-title">{title || "TaiScript"}</span>
         </NavLink>
       </div>
-
+{/*
       <nav className="nav-links">
-
 
         <NavLink
         to="/documentation"
@@ -24,11 +22,11 @@ function Navbar({ title }) {
         >
           Documentation
         </NavLink>
-        {/* <NavLink to="/codeide" className={({ isActive }) => isActive ? "active-link" : ""}>
+        <NavLink to="/codeide" className={({ isActive }) => isActive ? "active-link" : ""}>
           CodeIDE
-        </NavLink> */}
+        </NavLink>
       </nav>
-
+*/}
 
     </header>
   );
