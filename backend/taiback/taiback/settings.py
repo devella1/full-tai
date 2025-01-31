@@ -29,7 +29,7 @@ SECRET_KEY = "django-insecure-@mtb5j8$oauf*91eb-m!6b)x8g6&j90p5x9dwa1#t!jb35)bal
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["taiscript.com", "www.taiscript.com"]
 
 
 # Application definition
