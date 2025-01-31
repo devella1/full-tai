@@ -18,7 +18,7 @@ function CodeIDE() {
 
     try {
       // Example POST request to your backend
-      const response = await axios.post("http://127.0.0.1:8000/api/processInput", {
+      const response = await axios.post("https://www.taiscript.com/api/processInput", {
         input: inputText,
       });
       setoutputText(response.data.output.toString());

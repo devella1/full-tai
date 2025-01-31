@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-@mtb5j8$oauf*91eb-m!6b)x8g6&j90p5x9dwa1#t!jb35)bal"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["taiscript.com", "www.taiscript.com"]
+ALLOWED_HOSTS = ["taiscript.com", "www.taiscript.com", "127.0.0.1", "3.15.182.49"]
 
 
 # Application definition
@@ -89,16 +89,24 @@ DATABASES = {
 }
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
+    'http://127.0.0.1',
     # Add any other allowed origins here
+    "https://www.taiscript.com",
+    "https://taiscript.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1',
     "http://localhost:3000",  # Your React frontend
+    "https://www.taiscript.com",
+    "https://taiscript.com",
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1',
     "http://localhost:3000",  # Your React frontend
+    "https://www.taiscript.com",
+    "https://taiscript.com",
 ]
 
 # Password validation
