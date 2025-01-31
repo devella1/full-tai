@@ -9,8 +9,12 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
+import subprocess
 from pathlib import Path
+
+TAISCRIPT_REPO_URL = "https://github.com/kamal-dev/taiscript.git"
+TAISCRIPT_REPO_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "taiscript")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -137,3 +141,9 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+if not os.path.exists(TAISCRIPT_REPO_DIR):
+    print("Cloning TaiScript repository...")
+    subprocess.run(["git", "clone", TAISCRIPT_REPO_URL, TAISCRIPT_REPO_DIR])
+else:
+    print("TaiScript repository already exists.")
