@@ -23,11 +23,18 @@ def processInput(request):
             print(f"*******************************************************************************************************\nReceived input: {input_text}")
             if input_text is not None:
                 output_text = input_text
-                tokens = lexer(input_text)
+                tokens, err = lexer(input_text)
+                if (err):
+                    return JsonResponse({'output': err})
+                print(f"ast {tokens}, error {err}")
                 parser = Parser(tokens)
-                ast = parser.parse()
+                ast, err = parser.parse()
+                if (err):
+                    return JsonResponse({'output': err})
+                print(f"ast {ast}, error {err}")
                 interpreter = Interpreter()
                 output = interpreter.interpret(ast)
+                print(f"Output: {output}")
                 return JsonResponse({'output': output})
             else:
                 return JsonResponse({'error': 'No input provided'})
