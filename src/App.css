@@ -11,29 +11,27 @@ body {
 .app-container {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .landing-page {
   display: flex;
-  /* The navbar is 60px high, so let’s use full height minus that */
-  height: calc(100vh - 60px);
-  margin-top: 60px; /* to avoid being hidden under the navbar */
-  padding-bottom: 80px;
-  overflow: visible;
+  /* height: calc(100vh - 60px); */
+  margin-top: 60px;
 }
+
 
 /* Left hero area (always visible) */
 .left-hero {
-  width: 45%; /* or 40/50, up to you */
+  width: 45%;
   position: sticky;
-  top: 60px;
-  height: calc(100vh - 60px);
   display: flex;
+  top: 70px;
   align-items: center;
   justify-content: center;
+  height: calc(100vh - 60px);
   overflow: auto;
-  /* Optionally a subtle backdrop if you want a “panel” effect */
+  background: rgba(0,0,0,0.3);
 }
 
 /* The 3-dot bar above the code editor */
@@ -84,13 +82,6 @@ body {
 
 .editor-collapsed {
   height: 200px; /* or 60% of original if you want a dynamic approach. */
-}
-
-/* Right docs area (scrollable) */
-.docs-pane {
-  flex: 1;
-  overflow-y: auto;
-  padding: 2rem;
 }
 
 /* The code editor (Monaco or CodeMirror) inside the card */
@@ -346,17 +337,13 @@ body {
 
 
 .site-footer {
-  position: fixed;
-  bottom: 0;       /* pin to bottom */
-  left: 0;         /* full width */
-  width: 100%;
-  height: 60px;    /* desired footer height */
   background: rgba(0, 0, 0, 0.95);
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-  z-index: 9999;   /* above everything else */
+  margin-top: 2rem;
 }
+
 
 /* The text link style, if you want: */
 .site-footer a {
@@ -373,6 +360,14 @@ body {
 
 /* --- Make the layout responsive for small screens --- */
 @media (max-width: 770px) {
+
+  .app-container{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+  }
+  
   .landing-page {
     display: flex;
     flex-direction: column;

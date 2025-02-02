@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import Documentation from "./pages/Documentation";
 import CodeIDE from "./pages/CodeIDE";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/documentation" element={<Documentation />} />
         <Route path="/codeide" element={<CodeIDE/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }
